@@ -200,6 +200,7 @@ public class ApiGWImpl implements ApiGW {
         data.setSeizonkyufukin("生存給付金");
         data.setSueokiKikan("据置期間");
         data.setNenkannenkinShiharaiKaisu("年間年金支払回数");
+        apiRequestData.setData(data);
 
         //ヘッダの情報を設定
         Header header = new Header();
@@ -207,16 +208,15 @@ public class ApiGWImpl implements ApiGW {
         //認証キーを設定
         header.setAuthKey(header.getAuthKey());
         //ファイルIDを設定
-        header.setFileId(header.getFileId());
+//        header.setFileId(header.getFileId());
         //送信元識別子を設定
-        header.setTransmitFromCd(header.getTransmitFromCd());
+//        header.setTransmitFromCd(header.getTransmitFromCd());
         //送信時刻を設定
         header.setTime(header.getTime());
         //ヘッダをリクエストデータに追加
         apiRequestData.setHeader(header);
 
-        System.out.println(data.toString());
-        System.out.println(header.toString());
+        System.out.println(apiRequestData.toString());
         return createXMLString(apiRequestData);
     }
 
