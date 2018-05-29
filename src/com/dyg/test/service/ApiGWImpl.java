@@ -1,9 +1,8 @@
-package com.dyg.test.service.impl;
+package com.dyg.test.service;
 
 import com.dyg.test.dto.ApiRequestData;
 import com.dyg.test.dto.Data;
 import com.dyg.test.dto.Header;
-import com.dyg.test.service.ApiGW;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
